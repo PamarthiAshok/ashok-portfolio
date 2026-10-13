@@ -1,0 +1,1057 @@
+@font-face {
+    font-family: 'Product Sans';
+    src: url('/static/fonts/product_sans/ProductSansRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 1. Global design variables */
+:root {
+    --color-background: #FFFFFF;
+    --color-surface: #F3F6FA;
+    --color-text: #172033;
+    --color-primary: #2563EB;
+    --color-muted: #64748B;
+    --color-border: #E2E8F0;
+    --color-surface: #F3F6FA;
+    --color-muted: #64748B;
+    --color-primary: #2563EB;
+    --color-border: #E2E8F0;
+
+    --font-body: 'Product Sans', Arial, sans-serif;
+
+    --container-width: 1120px;
+
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 40px;
+    --space-xl: 64px;
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 24px;
+}
+
+/* 2. Reset browser defaults */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 3. Base document styles */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Responsive images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 5. Form controls inherit the website font */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 6. Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 7. Consistent page container */
+.container {
+    width: min(100% - 40px, var(--container-width));
+    margin-inline: auto;
+}
+
+/* 8. Basic heading defaults */
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* 9. Accessible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* 10. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 11. Portfolio header */
+header {
+    width: 100%;
+    min-height: 80px;
+    padding: 0 40px;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+}
+
+.home_page_name_container a {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text);
+    white-space: nowrap;
+}
+
+.home_page_navigation_elements {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.home_page_navigation_elements a {
+    color: var(--color-muted);
+    transition: color 0.2s ease;
+}
+
+.home_page_navigation_elements a:hover {
+    color: var(--color-primary);
+}
+
+.home_page_menu_button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xs);
+    font-size: 24px;
+    color: var(--color-text);
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+/* 12. Homepage introduction */
+.home_page_intro_section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-xl) 40px;
+}
+
+.home_page_intro_container {
+    width: min(100%, var(--container-width));
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+}
+
+.ashok_intro {
+    flex: 1;
+}
+
+.ashok_intro p:first-child {
+    color: var(--color-primary);
+    font-size: 18px;
+    margin-bottom: var(--space-xs);
+}
+
+.ashok_intro h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    margin-bottom: var(--space-sm);
+}
+
+.ashok_intro h1+p {
+    color: var(--color-muted);
+    font-size: 20px;
+    margin-bottom: var(--space-lg);
+}
+
+
+.ashok_intro_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.ashok_intro_buttons a {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+    background-color: #FFFFFF;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.ashok_intro_buttons a:first-child,
+.ashok_intro_buttons a:hover {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.ashok_intro_buttons a:hover {
+    transform: translateY(-2px);
+}
+
+.ashok_intro_buttons a {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ashok_intro_buttons a:first-child,
+.ashok_intro_buttons a:hover {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.ashok_image_container {
+    flex: 1;
+    min-height: 320px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+/* 12. Homepage introduction */
+.home_page_intro_section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-xl) 40px;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 12% 25%,
+            rgba(37, 99, 235, 0.09),
+            transparent 30%),
+        radial-gradient(circle at 88% 75%,
+            rgba(96, 165, 250, 0.13),
+            transparent 32%),
+        var(--color-background);
+}
+
+.home_page_intro_section::before,
+.home_page_intro_section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(4px);
+    animation: hero_float 10s ease-in-out infinite alternate;
+}
+
+.home_page_intro_section::before {
+    width: 280px;
+    height: 280px;
+    top: 8%;
+    left: -100px;
+    background: rgba(96, 165, 250, 0.12);
+}
+
+.home_page_intro_section::after {
+    width: 340px;
+    height: 340px;
+    right: -120px;
+    bottom: -100px;
+    background: rgba(37, 99, 235, 0.09);
+    animation-delay: -5s;
+}
+
+@keyframes hero_float {
+    from {
+        transform: translate3d(0, -12px, 0) scale(1);
+    }
+
+    to {
+        transform: translate3d(20px, 18px, 0) scale(1.08);
+    }
+}
+
+
+/* 13. Tablet layout */
+@media (max-width: 900px) {
+    header {
+        padding: 0 24px;
+    }
+
+    .home_page_navigation_elements {
+        gap: var(--space-sm);
+    }
+
+    .home_page_intro_section {
+        padding: var(--space-xl) 24px;
+    }
+
+    .home_page_intro_container {
+        gap: var(--space-lg);
+    }
+}
+
+/* 14. Mobile layout */
+@media (max-width: 800px) {
+    header {
+        min-height: 72px;
+        padding: var(--space-sm) 20px;
+        flex-wrap: wrap;
+    }
+
+    .home_page_menu_button {
+        display: inline-flex;
+    }
+
+    .home_page_navigation_elements {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+        padding: var(--space-sm) 0;
+    }
+
+    .home_page_navigation_elements.is-open {
+        display: flex;
+    }
+
+    .home_page_intro_section {
+        min-height: auto;
+        padding: var(--space-xl) 20px;
+    }
+
+    .home_page_intro_container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-lg);
+    }
+
+    .ashok_intro h1 {
+        font-size: 38px;
+    }
+
+    .ashok_intro h1+p {
+        font-size: 18px;
+    }
+
+    .ashok_intro_buttons {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .ashok_intro_buttons a {
+        padding: 10px 16px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    .ashok_image_container {
+        width: 100%;
+        min-height: 260px;
+    }
+}
+
+/* 15. Common portfolio section styles */
+.about_section,
+.skills_section,
+.projects_section,
+.experience_section,
+.contact_section {
+    padding: 48px 20px;
+    scroll-margin-top: 90px;
+}
+
+/* 16. Consistent section content width */
+.about_section_container,
+.skills_section_container,
+.projects_section_container,
+.experience_section_container,
+.contact_section_container {
+    width: min(100%, var(--container-width));
+    margin: 0 auto;
+}
+
+/* 17. Consistent section headings */
+.about_section_heading,
+.skills_section_heading,
+.projects_section_heading,
+.experience_section_heading,
+.contact_section_heading {
+    font-size: 32px;
+    margin-bottom: var(--space-md);
+}
+
+/* 18. Section description text */
+.skills_section_description,
+.projects_section_description,
+.contact_section_description {
+    color: var(--color-muted);
+    margin-bottom: var(--space-lg);
+}
+
+/* 19. Responsive section spacing */
+@media (max-width: 640px) {
+
+    .about_section,
+    .skills_section,
+    .projects_section,
+    .experience_section,
+    .contact_section {
+        padding: var(--space-lg) 20px;
+    }
+
+    .about_section_heading,
+    .skills_section_heading,
+    .projects_section_heading,
+    .experience_section_heading,
+    .contact_section_heading {
+        font-size: 26px;
+    }
+}
+
+/* 20. Skills list layout */
+.ashok_skills_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+/* 21. Individual skill cards */
+.ashok_skill_item {
+    padding: 12px 20px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-size: 15px;
+    transition: background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* 22. Skill card hover effect */
+.ashok_skill_item:hover {
+    background-color: #E8F0FF;
+    border-color: var(--color-primary);
+}
+
+/* 23. Projects list layout */
+.ashok_projects_list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+}
+
+/* 24. Individual project cards */
+.ashok_project_item {
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 25. Project card hover effect */
+
+.ashok_project_item:hover,
+.ashok_education_item:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 14px 32px rgba(23, 32, 51, 0.10);
+}
+
+
+/* 26. Project title */
+.ashok_project_title {
+    margin-bottom: var(--space-sm);
+    font-size: 21px;
+}
+
+/* 27. Project description */
+.ashok_project_description {
+    margin-bottom: var(--space-sm);
+    color: var(--color-muted);
+}
+
+/* 28. Technologies used in each project */
+.ashok_project_technologies {
+    margin-bottom: var(--space-md);
+    font-size: 14px;
+    color: var(--color-muted);
+}
+
+/* 29. Project link */
+.ashok_project_link {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.2s ease;
+}
+
+.ashok_project_link:hover {
+    background-color: #1D4ED8;
+}
+
+/* 30. Projects layout on smaller screens */
+@media (max-width: 600px) {
+    .ashok_projects_list {
+        grid-template-columns: 1fr;
+    }
+
+    .ashok_project_item {
+        padding: var(--space-md);
+    }
+}
+
+/* 31. Experience section layout */
+.ashok_experience_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+/* 32. Individual experience card */
+.ashok_experience_item {
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+/* 33. Experience role */
+.ashok_experience_role {
+    margin-bottom: var(--space-xs);
+    font-size: 21px;
+}
+
+/* 34. Organization name */
+.ashok_experience_organization {
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* 35. Internship duration */
+.ashok_experience_duration {
+    margin-bottom: var(--space-md);
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+/* 36. Experience description */
+.ashok_experience_description {
+    color: var(--color-muted);
+}
+
+/* 37. Experience card on mobile */
+@media (max-width: 600px) {
+    .ashok_experience_item {
+        padding: var(--space-md);
+    }
+}
+
+/* 38. Contact details layout */
+.ashok_contact_details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+/* 39. Individual contact detail */
+.ashok_contact_details p {
+    padding: var(--space-sm);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+/* 40. Contact links */
+.ashok_contact_details a {
+    color: var(--color-primary);
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+/* 41. Contact link hover effect */
+.ashok_contact_details a:hover {
+    color: #1D4ED8;
+    text-decoration: underline;
+}
+
+/* 42. Contact details on mobile */
+@media (max-width: 600px) {
+    .ashok_contact_details p {
+        padding: 12px;
+    }
+}
+
+/* Homepage profile image */
+
+
+.ashok_image_container {
+    width: 100%;
+    max-width: 420px;
+    min-height: 0;
+    aspect-ratio: 4 / 4;
+    margin: 0 auto;
+}
+
+
+.ashok_profile_image {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-lg);
+}
+
+/* Homepage introduction improvements */
+.home_page_intro_container {
+    gap: 48px;
+}
+
+.ashok_intro {
+    min-width: 0;
+}
+
+.ashok_image_container {
+    max-width: 520px;
+    min-height: 0;
+    aspect-ratio: 4 / 4;
+}
+
+.ashok_profile_image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* 43. Certifications section */
+.certifications_section {
+    padding: 48px 20px;
+    scroll-margin-top: 90px;
+}
+
+.certifications_section_container {
+    width: min(100%, var(--container-width));
+    margin: 0 auto;
+}
+
+.certifications_section_heading {
+    font-size: 32px;
+    margin-bottom: var(--space-md);
+}
+
+.certifications_section_description {
+    color: var(--color-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.ashok_certifications_list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+}
+
+.ashok_certification_item {
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.ashok_certification_item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(23, 32, 51, 0.08);
+}
+
+.ashok_certification_title {
+    font-size: 19px;
+    margin-bottom: var(--space-sm);
+}
+
+.ashok_certification_organization {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .certifications_section_heading {
+        font-size: 26px;
+    }
+
+    .ashok_certifications_list {
+        grid-template-columns: 1fr;
+    }
+
+    .ashok_certification_item {
+        padding: var(--space-md);
+    }
+}
+
+/* 44. Education section */
+.education_section {
+    padding: 48px 20px;
+    scroll-margin-top: 90px;
+}
+
+.education_section_container {
+    width: min(100%, var(--container-width));
+    margin: 0 auto;
+}
+
+.education_section_heading {
+    font-size: 32px;
+    margin-bottom: var(--space-md);
+}
+
+.ashok_education_list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+}
+
+.ashok_education_item {
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.ashok_education_degree {
+    font-size: 20px;
+    margin-bottom: var(--space-sm);
+}
+
+.ashok_education_institution {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+}
+
+.ashok_education_details,
+.ashok_education_score {
+    color: var(--color-muted);
+}
+
+@media (max-width: 640px) {
+    .education_section_heading {
+        font-size: 26px;
+    }
+
+    .ashok_education_list {
+        grid-template-columns: 1fr;
+    }
+
+    .ashok_education_item {
+        padding: var(--space-md);
+    }
+}
+
+.ashok_education_item {
+    transition: transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.ashok_education_item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(23, 32, 51, 0.08);
+}
+
+
+/* 45. Footer section */
+.ashok_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 20px;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.ashok_footer p {
+    margin: 0;
+}
+
+.ashok_footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ashok_footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile footer */
+@media (max-width: 640px) {
+    .ashok_footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* 46. Enhanced card animations */
+.ashok_project_item,
+.ashok_education_item {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.ashok_project_item:hover,
+.ashok_education_item:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 14px 32px rgba(23, 32, 51, 0.10);
+}
+
+/* Scroll reveal */
+.ashok_project_item,
+.ashok_education_item {
+    opacity: 1;
+}
+
+.ashok_project_item.reveal-ready,
+.ashok_education_item.reveal-ready {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.ashok_project_item.reveal-ready.is-visible,
+.ashok_education_item.reveal-ready.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Preserve accessibility for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .home_page_intro_section::before,
+    .home_page_intro_section::after {
+        animation: none;
+    }
+
+    .ashok_project_item,
+    .ashok_education_item {
+        transition: none;
+    }
+
+    .ashok_project_item.reveal-ready,
+    .ashok_education_item.reveal-ready {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Technology Logos section */
+
+.technology_section {
+    padding: 48px 20px;
+    scroll-margin-top: 90px;
+}
+
+.technology_section_container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.technology_section h2 {
+    margin-bottom: 12px;
+    font-size: 32px;
+    color: var(--color-text);
+}
+
+.technology_section_description {
+    margin-bottom: 32px;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.technology_logo_grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.technology_logo_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 145px;
+    padding: 20px 12px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    transition: transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.technology_logo_item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.technology_logo_item p {
+    margin: 0;
+    color: var(--color-text);
+    font-weight: 500;
+    text-align: center;
+}
+
+.technology_logo_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(23, 32, 51, 0.08);
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+    .technology_logo_grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .technology_section {
+        padding: 40px 20px;
+    }
+
+    .technology_section h2 {
+        font-size: 26px;
+    }
+
+    .technology_logo_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .technology_logo_item {
+        min-height: 125px;
+        padding: 16px 8px;
+    }
+
+    .technology_logo_item img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .technology_logo_item {
+        transition: none;
+    }
+
+    .technology_logo_item:hover {
+        transform: none;
+    }
+}
+
+
+/* Scroll-reveal animations for project and education cards */
+
+.ashok_project_item,
+.ashok_education_item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Initial state applied by JavaScript */
+.ashok_project_item.reveal-ready,
+.ashok_education_item.reveal-ready {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Final visible state */
+.ashok_project_item.reveal-ready.is-visible,
+.ashok_education_item.reveal-ready.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Accessibility: respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    .ashok_project_item,
+    .ashok_education_item,
+    .ashok_project_item.reveal-ready,
+    .ashok_education_item.reveal-ready {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

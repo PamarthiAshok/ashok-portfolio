@@ -1,0 +1,499 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Pamarthi | Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/home.js' %}" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="home_page_name_container">
+            <a href="#home">Ashok Pamarthi</a>
+        </div>
+        <button type="button" class="home_page_menu_button" aria-label="Open navigation"
+            aria-controls="home_page_navigation" aria-expanded="false">
+            ☰
+        </button>
+        <nav class="home_page_navigation_elements" id="home_page_navigation" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section: Introduces Ashok with a short tagline, profile image, and primary action links. -->
+        <section id="home" class="home_page_intro_section">
+            <div class="home_page_intro_container">
+
+                <div class="ashok_intro">
+                    <p>Hello, I'm</p>
+
+                    <h1>Ashok Pamarthi</h1>
+
+                    <p>Building ideas into applications.</p>
+
+                    <div class="ashok_intro_buttons">
+                        <a href="#projects">View My Projects</a>
+                        <a href="#contact">Contact Me</a>
+                        <a href="{% static 'files/Ashok_Resume.pdf' %}" download="Ashok_Pamarthi_Resume.pdf">
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Homepage profile image  -->
+                <div class="ashok_image_container">
+                    <img src="{% static 'images/ashok_image.png' %}" alt="Ashok Pamarthi" class="ashok_profile_image">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section: Provides a brief introduction to Ashok's background, interests, and development goals. -->
+        <section id="about" class="about_section">
+            <div class="about_section_container">
+                <h2 class="about_section_heading">About Me</h2>
+
+                <div class="ashok_about_content">
+
+                    <p class="ashok_about_description">
+                        I'm Ashok Pamarthi, an MCA graduate with a strong interest
+                        in Python full-stack development and software engineering.
+                        I have completed Python Full Stack training at PySpiders
+                        and built projects such as a Banking Management System using
+                        Django and Oracle SQL, and a Weather Forecast Application
+                        using JavaScript and the OpenWeather API.
+
+                        <br><br>
+
+                        I recently completed a three-month internship at SL Business
+                        Solutions Pvt. Ltd., Bengaluru, where I worked on PDF
+                        accessibility remediation, accessible document structures,
+                        and accessibility testing. I enjoy solving problems,
+                        learning new technologies, and building practical,
+                        user-friendly applications.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <!-- Education Section: Highlights academic qualifications. -->
+        <section id="education" class="education_section">
+            <div class="education_section_container">
+
+                <h2 class="education_section_heading">Education</h2>
+
+                <div class="ashok_education_list">
+
+                    <!-- MCA -->
+                    <div class="ashok_education_item">
+                        <h3 class="ashok_education_degree">
+                            Master of Computer Applications (MCA)
+                        </h3>
+
+                        <p class="ashok_education_institution">
+                            Koneru Lakshmaiah University
+                        </p>
+
+                        <p class="ashok_education_details">
+                            Graduated: 2025
+                        </p>
+
+                        <p class="ashok_education_score">
+                            CGPA: 9.07
+                        </p>
+                    </div>
+
+                    <!-- B.Sc. Computer Science -->
+                    <div class="ashok_education_item">
+                        <h3 class="ashok_education_degree">
+                            B.Sc. Computer Science
+                        </h3>
+
+                        <p class="ashok_education_institution">
+                            ANR College, Gudivada
+                        </p>
+
+                        <p class="ashok_education_details">
+                            Graduated: 2023
+                        </p>
+
+                        <p class="ashok_education_score">
+                            CGPA: 7.2
+                        </p>
+                    </div>
+
+                    <!-- Intermediate -->
+                    <div class="ashok_education_item">
+                        <h3 class="ashok_education_degree">
+                            Intermediate (12th)
+                        </h3>
+
+                        <p class="ashok_education_institution">
+                            Narayana Junior College, Vuyyuru
+                        </p>
+
+                        <p class="ashok_education_details">
+                            2018 – 2020
+                        </p>
+
+                        <p class="ashok_education_score">
+                            CGPA: 8.6
+                        </p>
+                    </div>
+
+                    <!-- SSC (10th) -->
+                    <div class="ashok_education_item">
+                        <h3 class="ashok_education_degree">
+                            SSC (10th)
+                        </h3>
+
+                        <p class="ashok_education_institution">
+                            Sri Chaitanya Techno School, Vijayawada
+                        </p>
+
+                        <p class="ashok_education_details">
+                            Year of Completion: 2018
+                        </p>
+
+                        <p class="ashok_education_score">
+                            GPA: 8.5
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Skills Section: Highlights technical skills and development tools. -->
+        <section id="skills" class="skills_section">
+            <div class="skills_section_container">
+
+                <h2 class="skills_section_heading">Technical Skills</h2>
+
+                <p class="skills_section_description">
+                    Technologies and tools I use to develop applications
+                    and build practical software solutions.
+                </p>
+
+                <div class="ashok_skills_list">
+
+                    <div class="ashok_skill_item">Python</div>
+                    <div class="ashok_skill_item">JavaScript (ES6)</div>
+                    <div class="ashok_skill_item">HTML5</div>
+                    <div class="ashok_skill_item">CSS3</div>
+
+                    <div class="ashok_skill_item">Django</div>
+
+                    <div class="ashok_skill_item">Oracle SQL</div>
+                    <div class="ashok_skill_item">MySQL</div>
+                    <div class="ashok_skill_item">SQLite</div>
+
+                    <div class="ashok_skill_item">Git</div>
+                    <div class="ashok_skill_item">GitHub</div>
+                    <div class="ashok_skill_item">VS Code</div>
+
+                    <div class="ashok_skill_item">Adobe Acrobat Pro</div>
+                    <div class="ashok_skill_item">PAC</div>
+                    <div class="ashok_skill_item">Quick Fixer</div>
+
+                    <div class="ashok_skill_item">PDF/UA</div>
+                    <div class="ashok_skill_item">WCAG 2.x</div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Logos section -->
+        <section id="technologies" class="technology_section">
+            <div class="technology_section_container">
+
+                <h2>Technologies I Work With</h2>
+
+                <p class="technology_section_description">
+                    Tools and technologies I use to build applications.
+                </p>
+
+                <div class="technology_logo_grid">
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo">
+                        <p>Python</p>
+                    </div>
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/django/092E20" alt="Django logo">
+                        <p>Django</p>
+                    </div>
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo">
+                        <p>JavaScript</p>
+                    </div>
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 logo">
+                        <p>HTML5</p>
+                    </div>
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/css/663399" alt="CSS logo">
+                        <p>CSS3</p>
+                    </div>
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/git/F05032" alt="Git logo">
+                        <p>Git</p>
+                    </div>
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub logo">
+                        <p>GitHub</p>
+                    </div>
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL logo">
+                        <p>MySQL</p>
+                    </div>
+
+                    <div class="technology_logo_item">
+                        <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQLite logo">
+                        <p>SQLite</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects Section: Showcases selected projects, technologies, and project links. -->
+        <section id="projects" class="projects_section">
+            <div class="projects_section_container">
+
+                <h2 class="projects_section_heading">My Projects</h2>
+
+                <p class="projects_section_description">
+                    Explore my projects, where I apply Python full-stack
+                    development skills to build practical applications.
+                </p>
+
+                <div class="ashok_projects_list">
+
+                    <!-- Banking Management System -->
+                    <div class="ashok_project_item">
+                        <h3 class="ashok_project_title">
+                            Banking Management System
+                        </h3>
+
+                        <p class="ashok_project_description">
+                            Developed a banking web application using Python,
+                            Django, and Oracle SQL. Implemented OTP-based
+                            authentication, email verification, and SHA-256
+                            password hashing. Features include deposits,
+                            withdrawals, balance enquiry, and fund transfers,
+                            with Django sessions, CSRF protection, and database
+                            transactions.
+                        </p>
+
+                        <p class="ashok_project_technologies">
+                            Technologies: Python, Django, Oracle SQL
+                        </p>
+
+                        <a href="https://github.com/PamarthiAshok/banking-management-system-django"
+                            class="ashok_project_link">
+                            View Project
+                        </a>
+                    </div>
+
+                    <!-- Weather Forecast Web Application -->
+                    <div class="ashok_project_item">
+                        <h3 class="ashok_project_title">
+                            Weather Forecast Web Application
+                        </h3>
+
+                        <p class="ashok_project_description">
+                            Built a responsive weather application using HTML,
+                            CSS, JavaScript, and the OpenWeather API. Implemented
+                            city search, asynchronous API integration, and error
+                            handling to display live weather information,
+                            including temperature, humidity, wind speed, and
+                            weather conditions.
+                        </p>
+
+                        <p class="ashok_project_technologies">
+                            Technologies: HTML, CSS, JavaScript, OpenWeather API
+                        </p>
+
+                        <a href="https://github.com/PamarthiAshok/weather-application" class="ashok_project_link">
+                            View Project
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Certifications Section: Highlights professional courses and certifications. -->
+        <section id="certifications" class="certifications_section">
+            <div class="certifications_section_container">
+
+                <h2 class="certifications_section_heading">
+                    Certifications
+                </h2>
+
+                <p class="certifications_section_description">
+                    Professional certifications and courses that strengthen
+                    my programming and technology skills.
+                </p>
+
+                <div class="ashok_certifications_list">
+
+                    <div class="ashok_certification_item">
+                        <h3 class="ashok_certification_title">
+                            Python Full Stack Developer
+                        </h3>
+
+                        <p class="ashok_certification_organization">
+                            PySpiders
+                        </p>
+                    </div>
+
+                    <div class="ashok_certification_item">
+                        <h3 class="ashok_certification_title">
+                            Oracle Cloud Infrastructure 2025
+                            AI Foundations Associate
+                        </h3>
+
+                        <p class="ashok_certification_organization">
+                            Oracle
+                        </p>
+                    </div>
+
+                    <div class="ashok_certification_item">
+                        <h3 class="ashok_certification_title">
+                            Python Essentials 1
+                        </h3>
+
+                        <p class="ashok_certification_organization">
+                            Cisco Networking Academy and OpenEDG
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Experience Section: Highlights internship experience and responsibilities. -->
+        <section id="experience" class="experience_section">
+            <div class="experience_section_container">
+
+                <h2 class="experience_section_heading">Experience</h2>
+
+                <div class="ashok_experience_list">
+                    <div class="ashok_experience_item">
+
+                        <h3 class="ashok_experience_role">
+                            Associate Software Engineer Intern
+                        </h3>
+
+                        <p class="ashok_experience_organization">
+                            SL Business Solutions Pvt. Ltd.
+                        </p>
+
+                        <p class="ashok_experience_duration">
+                            June 29, 2026 – September 29, 2026
+                            <span>(3 Months)</span>
+                        </p>
+
+                        <p class="ashok_experience_description">
+                            Completed a three-month internship at SL Business
+                            Solutions Pvt. Ltd., Vijayanagar, Bengaluru, working
+                            on PDF accessibility remediation for client documents.
+
+                            <br><br>
+
+                            Created accessible PDF tag structures using Adobe
+                            Acrobat Pro, HTML, CSS, PAC, and Quick Fixer.
+                            Performed accessibility testing and quality assurance
+                            in alignment with PDF/UA and WCAG 2.x standards.
+                            Collaborated with team members to deliver accessible
+                            documents for international clients.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section: Provides contact information and links to Ashok's professional profiles. -->
+        <section id="contact" class="contact_section">
+            <div class="contact_section_container">
+                <h2 class="contact_section_heading">Contact Me</h2>
+
+                <p class="contact_section_description">
+                    Have a question or an opportunity to discuss?
+                    Feel free to get in touch.
+                </p>
+
+
+                <div class="ashok_contact_details">
+                    <p>
+                        Email:
+                        <a href="mailto:pamarthivenkataashokkumar@gmail.com">
+                            pamarthivenkataashokkumar@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        Phone:
+                        <a href="tel:+919908817134">
+                            +91 99088 17134
+                        </a>
+                    </p>
+
+                    <p>
+                        GitHub:
+                        <a href="https://github.com/PamarthiAshok?tab=repositories" target="_blank"
+                            rel="noopener noreferrer">
+                            Visit my GitHub
+                        </a>
+                    </p>
+
+                    <p>
+                        LinkedIn:
+                        <a href="https://www.linkedin.com/in/venkata-ashok-kumar-pamarthi-37109b31a/" target="_blank"
+                            rel="noopener noreferrer">
+                            Visit my LinkedIn
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer section -->
+        <footer class="ashok_footer">
+            <p>&copy; 2026 Ashok Pamarthi. All rights reserved.</p>
+
+            <a href="#home">Back to Top ↑</a>
+        </footer>
+
+
+    </main>
+</body>
+
+</html>
